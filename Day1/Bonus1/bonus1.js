@@ -10,7 +10,7 @@ welcome();
 
 
 // --------------------------------------------------------
-var detaile = document.getElementById('details');
+let detaile = document.getElementById('details');
 
 function tableDetails() {
 
@@ -23,7 +23,7 @@ function tableDetails() {
 
     do {
         var birthYear = prompt("Enter Your birth year (must be less than 2010): ");
-        birthYear = parseInt(birthYear);
+            birthYear = parseInt(birthYear);
 
         if (!isNaN(birthYear && birthYear < 2010)) {
             break;
@@ -32,7 +32,7 @@ function tableDetails() {
 
     var age = 2025 - birthYear;
 
-    var div = document.querySelector('div');
+    let div = document.querySelector('div');
 
     div.innerHTML = `
         <table style="border:1px solid black;">
@@ -61,3 +61,6 @@ detaile.onclick = function () {
 //------------------------------------------------------------------------------------------
 
 
+  function removeSkille(btn) {
+      btn.parentElement.remove();
+}
