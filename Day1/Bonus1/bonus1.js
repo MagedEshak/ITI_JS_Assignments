@@ -60,7 +60,6 @@ detaile.onclick = function () {
 
 //------------------------------------------------------------------------------------------
 
-
-  function removeSkille(btn) {
-      btn.parentElement.remove();
+function removeSkille(btn) {
+    btn.parentElement.remove();
 }
