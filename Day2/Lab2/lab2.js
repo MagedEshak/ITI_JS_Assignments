@@ -15,6 +15,8 @@ for (let i = 0; i < tips.length; i++) {
 let btn = document.getElementById("btn-dateTime");
 let date = new Date();
 btn.onclick = function () {
+
+    
     document.write(date.toLocaleString() + "<br>");
 }
 
@@ -98,6 +100,7 @@ let studentsNamesAndDeg = [
     { name: "Kha", degree: 90 },
     { name: "Mo", degree: 60 },
     { name: "vu", degree: 80 },
+    { name: "Kero", degree: 40 },
 ];
 
 console.log("-".repeat(5) + " who got degree between 90 and 100  " + "-".repeat(5) );
