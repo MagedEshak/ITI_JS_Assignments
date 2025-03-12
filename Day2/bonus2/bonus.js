@@ -21,7 +21,7 @@ btn.onclick = function () {
 document.getElementById("register").onclick = function(){
     let phoneNum = document.getElementById("phone").value;
 
-    let phoneRe = /^(002)(01)(1|2|5)(\d){8}$/;
+    let phoneRe = /^(20)(01)(1|2|5)(\d){8}$/;
 
     let validationResult = phoneRe.test(phoneNum);
     
@@ -79,7 +79,6 @@ let userDateOfBirthInput = prompt("Enter your date: (ex: YYYY-MM-DD)");
 let birthDay = prompt("Enter your BirthDate: ");
 
 let color = prompt("Enter your Color: \n(r) Red\n(b) Blue\n(g) Green:");
-
 
 let colorMap = {
     r: "red",

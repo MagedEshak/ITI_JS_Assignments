@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form id="registForm">
+        <label for="fullNameIn">Full Name: </label>
+        <input type="text" name="fullName" id="fullNameIn" placeholder="Enter Your Full Name" required>
+        <br>
+        <label for="emailIn">Email: </label>
+        <input type="email" name="email" id="emailIn">
+        <br>
+        <label for="passIn">Password: </label>
+        <input type="password" name="password" id="passIn">
+        <br>
+        <label for="repassIn">Confirm Password: </label>
+        <input type="password" name="conPass" id="repassIn">
+        <br>
+        <select>
+            <option value="Please, Select Your City" selected disabled>Please, Select Your City</option>
+            <option value="Assuit">Assuit</option>
+            <option value="Minya">Minya</option>
+            <option value="Sohag">Sohag</option>
+            <option value="Cairo">Cairo</option>
+        </select name="city">
+        <br>
+        <input type="checkbox" id="termsChecked" name="checkbox" required>
+        <label for="termsChecked">I accept the terms and conditions.</label>
+        <br>
+        <input type="submit" value="Register">
+    </form>
+
+    <script src="main.js"></script>
+</body>
+
+</html> 
