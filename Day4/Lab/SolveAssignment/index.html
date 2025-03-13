@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
 </head>
+<style>
+    #formVlid input:valid+.message {
+        background-image: url('valid.png');
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+    }
+
+    #formVlid input:invalid+.message {
+        background-image: url('notvalid.png');
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+    }
+</style>
 
 <body>
     <form id="registForm">
@@ -34,6 +51,16 @@
         <input type="checkbox" id="termsChecked" name="checkbox" required>
         <label for="termsChecked">I accept the terms and conditions.</label>
         <br>
+        <input type="submit" value="Register">
+    </form>
+
+    <hr>
+
+    <form id="formVlid">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required pattern=".{5,}">
+        <span class="message"></span>
+        <br><br>
         <input type="submit" value="Register">
     </form>
 

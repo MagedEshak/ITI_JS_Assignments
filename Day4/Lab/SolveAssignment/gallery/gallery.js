@@ -75,24 +75,30 @@ function over(e) {
     e.target.classList.add("imgsClass");
 }
 
-function leave(e) {
+    function leave(e) {
     e.target.classList.remove("imgsClass");
     e.target.classList.add("imgsClass1");
-}
+    }
 
 
-let newImg = document.createElement("img");
+    let img = document.createElement("img");
+        img.setAttribute("src", "../../Resources for Assignments/Images For Slide Show/3.jpg");
 
+        let container = document.getElementById("imgsId");
 
-newImg.setAttribute("src", "../../Resources for Assignments/Images For Slide Show/8.jpg");
-document.getElementById("imgsId").appendChild(newImg);
+        container.appendChild(img);
 
-let newImg2 = document.createElement("img2");
-newImg2.setAttribute("src", "../../Resources for Assignments/Images For Slide Show/2.jpg");
-document.getElementById("imgsId").insertBefore(newImg2,newImg);
+    let img2 = document.createElement("img");
+        img2.setAttribute("src", "../../Resources for Assignments/Images For Slide Show/1.jpg");
+        container.insertBefore(img2, container.firstChild);
 
-alert(document.getElementById("imgsId").childNodes.length + " Before remove");
+    let img3 = document.createElement("img");
+        img3.setAttribute("src", "../../Resources for Assignments/Images For Slide Show/7.jpg");
+                container.appendChild(img3);
 
-document.getElementById("imgsId").removeChild(newImg2);
+    alert("Before remove: " + container.childNodes.length);
+        
+    container.removeChild(img2);
 
-alert(document.getElementById("imgsId").childNodes.length + " After remove");
+    alert("After remove: " + container.childNodes.length);
+

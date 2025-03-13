@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+    <style>
+        .product-details {
+            width: 80%;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            display: flex;
+            gap: 20px;
+        }
+
+        .product-details img {
+            width: 300px;
+        }
+
+        .info {
+            max-width: 600px;
+        }
+
+        .info h2 {
+            margin-bottom: 10px;
+        }
+
+        .info p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Product Details</h1>
+    <div class="product-details" id="productDetails"></div>
+
+    <script>
+        let productId = localStorage.getItem("selectedProductId");
+
+        if (!productId) {
+            document.getElementById("productDetails").innerText = "No product selected.";
+        } else {
+            fetch(`https://fakestoreapi.com/products/${productId}`)
+                .then(res => res.json())
+                .then(product => {
+                    let container = document.getElementById("productDetails");
+
+                    container.innerHTML = `
+            <img src="${product.image}" alt="${product.title}">
+            <div class="info">
+              <h2>${product.title}</h2>
+              <p><strong>Category:</strong> ${product.category}</p>
+              <p><strong>Price:</strong> ${product.price} EGP</p>
+              <p><strong>Description:</strong> ${product.description}</p>
+              <p><strong>Rating:</strong> ⭐ ${product.rating.rate} (${product.rating.count} reviews)</p>
+            </div>
+          `;
+                });
+        }
+    </script>
+
+</body>
+
+</html>
