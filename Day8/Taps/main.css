@@ -1,0 +1,83 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+div,
+p,
+span {
+    font-family: 'Lucida Calligraphy';
+}
+
+
+#header {
+    width: 100%;
+    background-color: red;
+    padding: 50px;
+}
+
+div h1 {
+    text-align: center;
+}
+
+#linksbar {
+    width: 25%;
+    background-color: gray;
+    float: left;
+    padding: 20px;
+}
+
+#content {
+    width: 75%;
+    background-color: pink;
+    float: left;
+    padding: 20px;
+}
+
+.none-bullet-list {
+    list-style: none;
+
+}
+
+.none-bullet-list li a {
+    color: red;
+    background-color: pink;
+
+}
+
+.content .aboutus {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#loginform {
+    border: 2px dashed rgb(20, 70, 60);
+    padding: 20px;
+}
+
+#loginform input {
+    background-color: yellow;
+}
+
+#loginform input:focus {
+    background-color: white;
+}
+
+.tabled-bordered {
+    display: table-cell;
+    padding: 5px;
+    border: 3px solid;
+}
+
+#aboutus {
+    color: yellow;
+}
+
+#aboutus {
+    color: red !important;
+}
