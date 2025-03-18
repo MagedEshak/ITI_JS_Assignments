@@ -9,7 +9,7 @@ console.log("-".repeat(20));
 console.log("I'm in for..in..");
 console.log("-".repeat(20));
 
-for (const key in friends) {
+for (let key in friends) {
     console.log(key);
 }
 
@@ -18,8 +18,8 @@ console.log("-".repeat(20));
 console.log("I'm in for..of..");
 console.log("-".repeat(20));
 
-for (const key of friends) {
-    console.log(key);
+for (let ele of friends) {
+    console.log(ele);
 }
 
 //forEach => print values but must carry call back function
@@ -79,11 +79,12 @@ console.log("=".repeat(20));
 let numbersArr = [1, 5, 3, 4, 2, 4, 6, 8, 5];
 
 //--------------- a -------------------------
+console.log(" the odd values. ");
+console.log("-".repeat(20));
+
 let oddArr = numbersArr.filter(e => {
     return e % 2 != 0;
 });
-console.log(" the odd values. ");
-console.log("-".repeat(20));
 
 console.log(oddArr);
 
@@ -120,7 +121,7 @@ console.log("=".repeat(20));
 (function (num1, num2) {
     console.log(`The Sum of ${num1} + ${num2} = ${num1 + num2}`);
 
-    // return alert(`The Sum of ${num1} + ${num2} = ${num1 + num2}`);
+    return alert(`The Sum of ${num1} + ${num2} = ${num1 + num2}`);
 })(5, 6);
 
 //--------------- 7 -------------------------
@@ -164,3 +165,4 @@ console.log('No, none of the array elements start with "a".');
 console.log("-".repeat(20));
 
 startWith_B_S.forEach(e => console.log(e));
+
